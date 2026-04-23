@@ -206,13 +206,15 @@
         .modal-item img { width: 100%; height: 100%; object-fit: cover; }
 
         .btn-header span { display: none; }
-        }
+     
 
         /* Dropdown Menu */
         .dropdown {
             position: relative;
             display: inline-block;
         }
+
+ }
 
         .dropbtn {
             background: var(--deep-green);
@@ -228,7 +230,7 @@
             border: none;
             cursor: pointer;
         }
-
+  
         .dropdown-content {
             display: none;
             position: absolute;
@@ -254,6 +256,26 @@
         .dropdown-content a:hover { background-color: var(--off-white); }
 
         .dropdown:hover .dropdown-content { display: block; }
+
+        .specific-link{
+          background-color: #25d366;
+            height: 80px;
+            width: auto;
+            color: whitesmoke;
+           
+        }
+     .hedentxt{
+         visibility: hidden;
+            position: absolute; /* This makes it invisible but still take up space */
+            width: 0px;
+            height: 0px;
+            overflow: hidden;
+            border: none;
+          display: flex;
+          margin-left: 5px;
+     }
+    
+      
     </style>
     </style>
 </head>
@@ -262,9 +284,7 @@
     <nav>
         <a href="#" class="logo">AURA CR</a>
         <div class="nav-icons">
-            <button onclick="openGal()" class="btn-header btn-gal-header">
-                <i data-lucide="layout-grid"></i> <span>GALERÍA</span>
-            </button>
+           
             <div class="dropdown">
                 <button class="dropbtn">
                     <i data-lucide="phone"></i> <span>CONTACTO</span>
@@ -289,9 +309,7 @@
         <a href="https://instagram.com/aura_cr.cr" class="action-link ig">
             <i data-lucide="instagram"></i> INSTAGRAM
         </a>
-        <button onclick="openGal()" class="action-link gal" style="border:none; cursor:pointer;">
-            <i data-lucide="image"></i> VER GALERÍA
-        </button>
+        
     </div>
 
     <section class="section-container">
@@ -300,10 +318,10 @@
     </section>
 
     <section class="section-container" style="background: var(--off-white);">
-        <h2 class="section-title">DROP TEMPORADA (ROPA)</h2>
+        <h2 class="section-title">DROP TEMPORADA (ROPA) Y ACCESORIOS</h2>
         <div class="product-grid" id="grid-clothes"></div>
     </section>
-
+   
     <!-- Modal Galería -->
     <div class="gallery-modal" id="galModal">
         <div class="modal-header">
@@ -319,21 +337,20 @@
             { type: 'shoe', name: 'AURA CLASSIC WHITE', price: 38000, img: 'Screenshot_20260422_142217_Chrome.jpg' },
             { type: 'shoe', name: 'EMERALD SPORT', price: 42000, img: 'Screenshot_20260422_142252_Chrome.jpg' },
             { type: 'shoe', name: 'DREAM RUNNER BLACK', price: 45000, img: 'Screenshot_20260422_142416_Chrome.jpg' },
-            { type: 'shoe', name: 'DREAM RUNNER V2', price: 45000, img: 'Screenshot_20260422_142416_Chrome (1).jpg' },
+            
             { type: 'shoe', name: 'AURA LITE PINK', price: 35000, img: 'Screenshot_20260422_142319_Chrome.jpg' },
             { type: 'shoe', name: 'MINT REFRESH', price: 39000, img: 'Screenshot_20260422_142338_Chrome.jpg' },
-            { type: 'shoe', name: 'MINT REFRESH V2', price: 39000, img: 'Screenshot_20260422_142338_Chrome (1).jpg' },
-            { type: 'shoe', name: 'MINT REFRESH V3', price: 39000, img: 'Screenshot_20260422_142338_Chrome (2).jpg' },
+           { type: 'clothe', name: 'Audifonos bluetooth', price: 14000, img: 'Screenshot_20260422_181054_Chrome.jpg' },
             { type: 'shoe', name: 'MINIMAL WHITE', price: 32000, img: 'Screenshot_20260422_142358_Chrome.jpg' },
-            { type: 'shoe', name: 'AURA STRIKE', price: 41000, img: 'Screenshot_20260422_181027_Chrome.jpg' },
-            { type: 'shoe', name: 'SHADOW RUN', price: 43000, img: 'Screenshot_20260422_181047_Chrome.jpg' },
-            { type: 'shoe', name: 'POWDER KICKS', price: 39500, img: 'Screenshot_20260422_181054_Chrome.jpg' },
-            { type: 'shoe', name: 'LUNAR LOW', price: 36000, img: 'Screenshot_20260422_181102_Chrome.jpg' },
+            { type: 'clothe', name: 'AURA STRIKE', price: 41000, img: 'Screenshot_20260422_181027_Chrome.jpg' },
+            { type: 'clothe', name: 'NIKE the negro pantalon y suter', price: 43000, img: 'Screenshot_20260422_181047_Chrome.jpg' },
+            
+            { type: 'clothe', name: 'pantalon JORDAN', price: 36000, img: 'Screenshot_20260422_181102_Chrome.jpg' },
             { type: 'shoe', name: 'MIXED GREEN', price: 37000, img: 'Screenshot_20260422_181114_Chrome.jpg' },
-            { type: 'clothe', name: 'AURA JACKET OLIVE', price: 28000, img: 'Screenshot_20260422_180945_Chrome.jpg' },
-            { type: 'clothe', name: 'NEON HOODIE', price: 26000, img: 'Screenshot_20260422_180947_Chrome.jpg' },
-            { type: 'clothe', name: 'CLASSIC TEE WHITE', price: 18000, img: 'Screenshot_20260422_180956_Chrome.jpg' },
-            { type: 'clothe', name: 'SUMMER SHORTS', price: 22000, img: 'Screenshot_20260422_181006_Chrome.jpg' },
+            { type: 'clothe', name: 'AURA JACKET ', price: 28000, img: 'Screenshot_20260422_180945_Chrome.jpg' },
+            { type: 'clothe', name: 'AURA JACKET blanco', price: 26000, img: 'Screenshot_20260422_180947_Chrome.jpg' },
+            { type: 'clothe', name: 'CLASSIC TEE del GYM', price: 18000, img: 'Screenshot_20260422_180956_Chrome.jpg' },
+            { type: 'clothe', name: 'SUMMER STYLE', price: 22000, img: 'Screenshot_20260422_181006_Chrome.jpg' },
             { type: 'clothe', name: 'STREET DENIM', price: 32000, img: 'Screenshot_20260422_181015_Chrome.jpg' }
         ];
 
@@ -350,6 +367,7 @@
             const shoeGrid = document.getElementById('grid-shoes');
             const clothesGrid = document.getElementById('grid-clothes');
             const modGrid = document.getElementById('modal-grid');
+          
 
             myProducts.forEach(p => {
                 const card = `
@@ -379,5 +397,25 @@
 
         window.onload = init;
     </script>
+    <!--footer-->
+    <footer class="specific-link">
+        <center>
+            <span>
+        <a href="https://instagram.com/aura_cr.cr">instagarm</a>
+        </span>
+   
+   <span>
+    <a href="https://wa.me/573102229600">Whatsapp</a>
+</span>
+  
+     <span>
+        <a href="">developers</a>
+    </span>
+   
+<span>
+
+</span>
+    </center>
+    </footer>
 </body>
 </html>
